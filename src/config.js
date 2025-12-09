@@ -28,6 +28,9 @@ module.exports = {
 
   enableDelete: false,
 
+  // If false, rooms will never be deleted for inactivity
+  enableRoomJanitor: false,
+
   logging: {
     console: true,
 

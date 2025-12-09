@@ -131,6 +131,7 @@ class RoomList {
   destroy() {
     if (this.janitorInterval) {
       clearInterval(this.janitorInterval);
+      this.janitorInterval = null;
     }
   }
 }

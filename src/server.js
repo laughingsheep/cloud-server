@@ -18,7 +18,9 @@ const wss = new WebSocket.Server({
 
 const rooms = new RoomList();
 rooms.enableLogging = true;
-rooms.startJanitor();
+if (config.enableRoomJanitor) {
+  rooms.startJanitor();
+}
 
 const connectionManager = new ConnectionManager();
 connectionManager.start();
