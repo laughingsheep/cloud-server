@@ -15,7 +15,7 @@ This server also does not implement history logs.
 Needs Node.js and npm.
 
 ```
-git clone https://github.com/TurboWarp/cloud-server
+git clone https://github.com/laughingsheep/cloud-server
 cd cloud-server
 npm install
 npm start
