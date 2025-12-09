@@ -2,7 +2,7 @@ const RoomList = require('../RoomList');
 const Room = require('../Room');
 const Client = require('../Client');
 
-// not tested: janitor, logging
+jest.mock('../Client.js');
 
 test('create', () => {
   const roomList = new RoomList();
@@ -65,4 +65,14 @@ test('maxRooms', () => {
     roomList.create(i.toString());
   }
   expect(() => roomList.create('10000')).toThrow();
+});
+
+test('startJanitor and destroy', () => {
+  const roomList = new RoomList();
+  
+  // Test that startJanitor can be called without error
+  expect(() => roomList.startJanitor()).not.toThrow();
+  
+  // Test that destroy can be called without error
+  expect(() => roomList.destroy()).not.toThrow();
 });
